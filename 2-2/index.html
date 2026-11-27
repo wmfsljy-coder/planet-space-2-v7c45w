@@ -55,6 +55,7 @@
 
         <section class="scene" data-title="두 무리의 색등급도">
           <div class="story"><div class="who">🧑‍🔬</div><div class="say"><span class="name">섀플리</span>“성단의 별들을 <b>색(가로)과 밝기(세로)</b>로 찍은 그림을 C-M도라고 합니다. 한 성단의 별들은 같은 때에 함께 태어났으니, 이 그림이 곧 성단의 <b>나이표</b>입니다. 무거운 별부터 먼저 주계열을 떠나거든요. 나이를 바꿔 가며 <b>주계열 이탈점</b>이 어디로 가는지 보십시오.”</div></div>
+          <div class="pv" data-key="p1-2"><p class="pv-q">성단의 나이를 점점 많게 하면, 색등급도에서 주계열이 끝나는 곳(주계열 이탈점)은 어떻게 움직일까요?</p><button class="pv-o" data-why="늙으면 별이 커지고 밝아지니 위로 갈 것 같지만, 무겁고 밝은 별부터 먼저 주계열을 떠납니다. 그래서 남은 주계열의 꼭대기는 점점 내려옵니다.">위쪽(밝고 파란 쪽)으로 올라간다</button><button class="pv-o" data-why="주계열에 머무는 시간은 별의 질량마다 다릅니다. 시간이 흐르면 무거운 별부터 차례로 빠져나가므로 이탈점은 계속 옮겨 갑니다.">주계열은 변하지 않으므로 그대로다</button><button class="pv-o" data-ok>아래쪽(어둡고 붉은 쪽)으로 내려간다</button><p class="pv-a">무거운 별일수록 수명이 짧아 먼저 주계열을 떠나므로, 나이가 많을수록 <b>주계열 이탈점</b>이 아래(어둡고 붉은 쪽)로 내려옵니다. 이탈점의 위치로 성단의 <b>나이</b>를 알 수 있습니다.</p></div>
           <div class="stage-card">
             <div class="canvas-wrap studio"><canvas id="a-c-cmd" width="900" height="440"></canvas></div>
             <div class="controls">
@@ -92,6 +93,7 @@
 
         <section class="scene" data-title="심장 박동으로 거리를 재다">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“주계열 맞추기는 별을 하나하나 찍어야 해서 아주 먼 성단에는 쓰기 어렵습니다. 그때 쓰는 것이 <b>맥동변광성</b>이에요. 세페이드는 <b>주기가 길수록 실제로 더 밝다</b>는 관계가 있어서, 밝기가 오르내리는 <b>주기만 재면 절대 등급을 알 수 있습니다.</b> 관측된 광도곡선에 내 모형 곡선을 포개 보세요.”</div></div>
+          <div class="pv" data-key="p1-4"><p class="pv-q">세페이드 나와 다는 겉보기 등급이 거의 같은데, 다의 변광 주기가 더 깁니다. 더 멀리 있는 것은 어느 쪽일까요?</p><button class="pv-o" data-why="주기가 긴 별을 어두운 별로 거꾸로 생각하면 이렇게 됩니다. 실제로는 주기가 긴 세페이드가 더 밝습니다. 더 밝은 별이 같은 밝기로 보인다면 더 멀리 있는 것입니다.">세페이드 나</button><button class="pv-o" data-ok>세페이드 다</button><button class="pv-o" data-why="겉보기 밝기에는 별의 실제 밝기와 거리가 함께 들어 있습니다. 주기로 알아낸 실제 밝기가 다르면 거리도 다릅니다.">겉보기 등급이 같으므로 같은 거리</button><p class="pv-a">세페이드는 주기가 길수록 실제로 밝습니다(<b>주기-광도 관계</b>). 주기로 절대 등급을 알고 겉보기 등급과 견주면(<b>거리 지수</b>) 거리가 나옵니다.</p></div>
           <div class="stage-card">
             <div class="canvas-wrap studio" data-kind="model calc"><canvas id="a-c-cep" width="900" height="440"></canvas></div>
             <div class="controls">
@@ -178,6 +180,7 @@
 
         <section class="scene" data-title="빛이 조금씩 갉아먹히고 있었다">
           <div class="story"><div class="who">🧔‍♂️</div><div class="say"><span class="name">트럼플러</span>“만약 별빛이 오는 길에 <b>조금씩 깎여</b> 어두워진다면, 우리는 그 별을 실제보다 <b>멀다</b>고 잘못 계산하게 됩니다. 멀수록 더 많이 깎일 테니 오차도 멀수록 커지겠지요. 1 kpc를 지날 때마다 몇 등급씩 깎이는지 넣어 보면서, 네 성단의 지름이 같아지는 값을 찾아 주십시오.”</div></div>
+          <div class="pv" data-key="p2-2"><p class="pv-q">별빛이 오는 길에 어두워지는 양(소광량)을 0에서 점점 크게 잡아 거리를 다시 계산하면, 먼 성단의 계산된 지름은 어떻게 될까요?</p><button class="pv-o" data-ok>작아진다</button><button class="pv-o" data-why="소광을 넣으면 무엇인가 더해져 커질 것 같지만, 소광 때문에 어두워진 만큼을 빼고 나면 별은 실제로 더 가까이 있는 것이 됩니다. 가까울수록 같은 각지름의 실제 크기는 작습니다.">커진다</button><button class="pv-o" data-why="실제 지름은 하늘에서 본 각지름에 거리를 곱해 구합니다. 거리가 바뀌면 지름도 함께 바뀝니다.">지름은 하늘에서 본 크기로만 정하므로 그대로다</button><p class="pv-a"><b>성간 소광</b>을 고려하지 않으면 거리가 실제보다 멀게 계산되어 먼 성단일수록 지름이 부풀려집니다. 소광을 보정하면 거리가 줄어 먼 성단의 지름이 작아지고 성단들의 크기가 비슷해집니다.</p></div>
           <div class="stage-card">
             <div class="canvas-wrap studio"><canvas id="b-c-tru" width="900" height="440"></canvas></div>
             <div class="controls">
@@ -194,6 +197,7 @@
 
         <section class="scene" data-title="파란빛이 먼저 사라진다">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">분광 관측 담당</span>“깎이는 정도가 <b>파장마다 다르다</b>는 것이 결정적인 증거였어요. 짧은 파란빛이 긴 붉은빛보다 훨씬 많이 깎입니다. 그래서 별빛은 어두워질 뿐 아니라 <b>붉어집니다</b>. 스펙트럼형으로 알아낸 <b>원래 색</b>과 실제 <b>관측된 색</b>의 차이가 바로 <b>색초과 E(B−V)</b>예요. 관측된 색과 맞을 때까지 색초과를 넣어 보세요.”</div></div>
+          <div class="pv" data-key="p2-3"><p class="pv-q">두꺼운 티끌 구름 너머에 숨은 별을 보려면, 어떤 빛으로 관측하는 것이 가장 유리할까요?</p><button class="pv-o" data-why="에너지가 큰 빛이 더 잘 뚫고 나올 것 같지만, 티끌은 파장이 짧은 빛일수록 더 많이 흡수·산란합니다. 자외선은 가장 많이 깎입니다.">에너지가 큰 자외선</button><button class="pv-o" data-ok>파장이 긴 적외선</button><button class="pv-o" data-why="모든 빛이 똑같이 깎인다면 별빛은 어두워지기만 하고 색은 그대로여야 합니다. 실제로는 파란빛이 더 많이 깎여 별빛이 붉어집니다.">파장과 상관없이 모두 똑같이 가려진다</button><p class="pv-a">성간 소광은 <b>파장이 짧을수록</b> 크고 길수록 작습니다. 그래서 티끌을 지나온 별빛은 붉어지고(<b>성간 적색화</b>, 색초과), 티끌 너머는 <b>적외선</b>으로 봐야 잘 보입니다.</p></div>
           <div class="stage-card">
             <div class="canvas-wrap studio" data-kind="model calc"><canvas id="b-c-red" width="900" height="440"></canvas></div>
             <div class="controls">
@@ -272,6 +276,7 @@
 
         <section class="scene" data-title="태양계에서 규칙을 확인하다">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“먼저 규칙을 눈으로 확인합시다. 태양계는 질량이 거의 전부 한가운데(태양)에 있는 계예요. 이때 공전 속도는 <b>v = 29.8 ÷ √(거리/1 AU) km/s</b>가 됩니다. 세 행성의 공전 속도를 직접 계산해서 넣어 보세요.”</div></div>
+          <div class="pv" data-key="p3-2"><p class="pv-q">태양계에서 태양으로부터 먼 행성일수록 공전 속도는 어떻게 될까요?</p><button class="pv-o" data-why="궤도가 커서 더 먼 길을 가야 하니 빨리 달려야 할 것 같지만, 멀수록 태양의 중력이 약해서 오히려 천천히 돕니다.">빨라진다</button><button class="pv-o" data-ok>느려진다</button><button class="pv-o" data-why="모든 행성이 같은 빠르기로 돌 것 같지만, 행성을 붙잡아 돌게 하는 태양의 중력은 멀수록 약합니다. 약한 중력으로 궤도를 유지하려면 더 천천히 돌아야 하므로 거리마다 공전 속도가 다릅니다.">모든 행성이 같은 속도로 돈다</button><p class="pv-a">질량이 가운데에 몰려 있으면 공전 속도는 거리의 제곱근에 반비례해 줄어듭니다(<b>케플러 회전</b>). 은하도 질량이 중심에만 있다면 바깥 별들이 이렇게 느려져야 합니다.</p></div>
           <div class="stage-card">
             <div class="canvas-wrap studio" data-kind="calc"><canvas id="c-c-kep" width="900" height="420"></canvas></div>
             <div class="controls">
@@ -292,6 +297,7 @@
 
         <section class="scene" data-title="관측 곡선을 맞춰라">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">루빈</span>“이것이 우리가 얻은 관측점입니다. 중심에서 20 kpc나 떨어진 곳에서도 속도가 줄지 않아요. 보이는 별과 가스만 넣은 곡선은 한참 아래를 지납니다. 눈에 보이지 않는 물질이 은하를 <b>공처럼 둘러싸고</b> 있다고 가정하고, 그 세기를 조절해 관측점과 맞춰 보세요.”</div></div>
+          <div class="pv" data-key="p3-3"><p class="pv-q">헤일로를 넣지 않고 보이는 별과 가스만으로 그린 회전 곡선은, 중심에서 멀어질수록 어떻게 될까요?</p><button class="pv-o" data-why="보이는 물질은 대부분 안쪽에 몰려 있어서, 바깥에서는 더 보탤 질량이 거의 없습니다. 그래서 관측과 달리 속도가 떨어집니다.">관측처럼 바깥에서도 거의 일정하다</button><button class="pv-o" data-why="바퀴처럼 한 덩어리로 돈다면 바깥이 빠르겠지만, 은하의 별들은 각자 안쪽 질량의 중력에 끌려 돕니다. 안쪽 질량이 더 늘지 않으면 바깥은 느려집니다.">바깥으로 갈수록 점점 빨라진다</button><button class="pv-o" data-ok>어느 정도 오른 뒤 바깥으로 갈수록 줄어든다</button><p class="pv-a">보이는 물질만으로는 바깥으로 갈수록 속도가 줄어야 하지만(케플러 회전과 비슷), 관측한 회전 곡선은 바깥에서도 거의 <b>평평</b>합니다. 이를 설명하는 가장 널리 받아들여지는 생각은 은하를 넓게 감싼 보이지 않는 질량, 곧 <b>암흑 물질</b>이 있다는 것입니다.</p></div>
           <div class="stage-card">
             <div class="canvas-wrap studio"><canvas id="c-c-rot" width="900" height="440"></canvas></div>
             <div class="controls">
@@ -367,6 +373,7 @@
 
         <section class="scene" data-title="선이 붉은 쪽으로 밀려 있다">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">CfA 탐사팀</span>“은하 스펙트럼에는 칼슘이 만든 어두운 선이 있습니다. 실험실에서 이 선의 파장은 <b>393.4 nm</b>예요. 관측된 스펙트럼에서 같은 선이 어디에 있는지 눈금을 맞춰 보세요. 밀려난 만큼이 <b>적색 편이 z</b>이고, <b>v = c z</b>, <b>d = v / H₀</b>로 거리가 나옵니다.”</div></div>
+          <div class="pv" data-key="p4-2"><p class="pv-q">더 먼 은하일수록 스펙트럼 속 칼슘 흡수선은 실험실에서 잰 자리와 견주어 어떻게 보일까요?</p><button class="pv-o" data-why="같은 원소가 내는 선이라도 광원이 멀어지면 파장이 길어져 보입니다(도플러 효과). 선이 밀린 정도가 은하의 움직임을 알려 줍니다.">같은 칼슘이므로 실험실과 같은 자리에 있다</button><button class="pv-o" data-ok>파장이 긴 붉은 쪽으로 더 많이 밀려 있다</button><button class="pv-o" data-why="가까워지는 천체라면 파란 쪽으로 밀리지만, 먼 은하들은 거의 모두 우리에게서 멀어지고 있습니다. 그래서 붉은 쪽으로 밀립니다.">파장이 짧은 파란 쪽으로 밀려 있다</button><p class="pv-a">먼 은하일수록 <b>적색 편이</b>가 크고 후퇴 속도가 빠릅니다. 후퇴 속도가 거리에 비례한다는 <b>허블 법칙</b>(v = H₀r)으로 거리를 구할 수 있습니다.</p></div>
           <div class="stage-card">
             <div class="canvas-wrap studio" data-kind="model calc"><canvas id="d-c-spec" width="900" height="440"></canvas></div>
             <div class="sim-side">
@@ -389,6 +396,7 @@
 
         <section class="scene" data-title="깊이를 넣자 나타난 것">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">CfA 탐사팀</span>“이제 같은 하늘 띠를 두 가지로 봅니다. 왼쪽은 <b>사진</b>, 오른쪽은 적색 편이로 깊이를 넣은 <b>쐐기 지도</b>예요. 얼마나 어두운 은하까지 스펙트럼을 찍을지를 정해 보세요. 어디까지 내려가야 구조가 드러날까요?”</div></div>
+          <div class="pv" data-key="p4-3"><p class="pv-q">한계 등급을 높여 더 어두운 은하까지 지도에 넣으면, 쐐기 모양 지도 속 은하들의 분포는 어떻게 보일까요?</p><button class="pv-o" data-why="우주가 아주 큰 규모에서 고르다는 생각에서 나오기 쉽지만, 수백 Mpc 안에서는 은하가 고르지 않게 모여 있습니다. 자료가 많아질수록 그 무늬가 더 뚜렷해집니다.">은하가 늘어날수록 고르게 퍼져 무늬가 사라진다</button><button class="pv-o" data-ok>은하가 줄과 벽처럼 모인 곳과 텅 빈 곳이 드러난다</button><button class="pv-o" data-why="한계 등급을 높이면 어두운 은하, 곧 먼 은하까지 들어옵니다. 늘어나는 것은 오히려 먼 쪽의 은하입니다.">가까운 쪽에만 은하가 늘어나고 먼 쪽은 비어 있다</button><p class="pv-a">분광 자료가 충분히 쌓이면 은하들이 거대한 벽처럼 늘어선 <b>장성(은하 장성)</b>과 은하가 거의 없는 <b>보이드</b>가 드러납니다. 우주의 거대 구조는 그물처럼 생겼습니다.</p></div>
           <div class="stage-card">
             <div class="canvas-wrap studio" data-kind-pos="br"><canvas id="d-c-wedge" width="900" height="440"></canvas></div>
             <div class="controls">
@@ -487,7 +495,7 @@
 </div>
 
 <button class="theme-toggle" id="themeToggle">라이트 모드</button>
-<script src="../assets/theme.js?v=b0f7ed73"></script>
+<script src="../assets/theme.js?v=f0b96aff"></script>
 <script src="../assets/scope.js?v=cecf172a"></script>
 <script src="../assets/kit.js?v=94e3bd47"></script>
 <script src="../assets/story.js?v=cd80882e"></script>
