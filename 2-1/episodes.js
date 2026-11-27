@@ -1245,7 +1245,7 @@ function progTip(ctx, n, total, x, y, w, okText, todo) {
     var mt = 0, TT = [3100, 9900, 3900];
     var cplay = playWire("c-play", !SK.REDUCE, ["별 멈추기", "별 움직이기"]);
     var BGS = (function () { var R0 = SK.rng(57), o = []; for (var i = 0; i < 26; i++) o.push([R0(), R0(), .8 + R0() * 1.6]); return o; })();
-    var IC = SK.iso({ ox: 664, oy: 160, s: .6, L: 230, D: 230 }), CZ = 196;
+    var IC = SK.iso({ ox: 664, oy: 160, s: .6, L: 230, D: 230, cv: canvas }), CZ = 196;
     function V3(a, b, k) { return [a[0] + b[0] * k, a[1] + b[1] * k, a[2] + b[2] * k]; }
     function paint() {
       var S = MOVE[s], tv = target(S), ok = Math.abs(vt - tv) <= 1.2;
@@ -1311,7 +1311,7 @@ function progTip(ctx, n, total, x, y, w, okText, todo) {
       SK.pill(ctx, "시선속도 " + (vr > 0 ? "+" : "") + vr + " km/s", Math.min(pS.x, qR.x) - 12, (pS.y + qR.y) / 2 + 4, { s: 11.5, a: "right", c: SC.orange, box: BOX });
       SK.pill(ctx, "접선속도 " + vt.toFixed(1) + " km/s", pS.x + 8, pS.y - 16, { s: 11.5, c: SC.blue, box: BOX });
       if (lt > 2 || lr > 2) SK.pill(ctx, ok ? "공간 운동 " + space.toFixed(1) + " km/s" : "공간 운동 = ?", qS.x + 10, qS.y + (vr < 0 ? 18 : -8), { s: 12, c: SC.violet, box: BOX });
-      I.label(ctx, E[0], E[1], E[2] - 8, "지구(관측자)", 34, 26, "#bfe6ff", BOX);
+      I.label(ctx, E[0], E[1], E[2] - 8, "지구(관측자)", I.viewName === "top" ? -40 : 34, I.viewName === "top" ? 4 : 26, "#bfe6ff", BOX);   /* 위에서 볼 때 아래 카드에 가리지 않게 */
       /* 아래 흰 카드 */
       var CX = 448, CY = 318;
       SK.card(ctx, CX, CY, W - CX - 8, H - CY - 8, "속도 쪼개 보기 · 공간 운동² = 시선속도² + 접선속도²");
@@ -1462,7 +1462,7 @@ function progTip(ctx, n, total, x, y, w, okText, todo) {
 
     var phi = -0.6, bplay = playWire("c-bplay", !SK.REDUCE, ["공전 멈추기", "공전 돌리기"]);
     /* 진열장: 바닥 L×D, 높이 ZT. 두 별은 높이 HZ 의 수평면(궤도면)에서 돈다 */
-    var DH = 420, I = SK.iso({ ox: 560, oy: 186, s: 0.66, L: 300, D: 300 }), L = I.L, D = I.D, ZT = 220, HZ = 120;
+    var DH = 420, I = SK.iso({ ox: 560, oy: 186, s: 0.66, L: 300, D: 300, cv: canvas }), L = I.L, D = I.D, ZT = 220, HZ = 120;
     var CX = L / 2, CY = D / 2, SPAN = 145, BOX = [0, W];
     var SKY = (function () { var R = SK.rng(83), a = [], i; for (i = 0; i < 70; i++) a.push([R(), R(), R()]); return a; })();
     function P(x, y, z) { return I.P(x, y, z); }
@@ -1562,7 +1562,7 @@ function progTip(ctx, n, total, x, y, w, okText, todo) {
       SK.pill(ctx, "B", pB.x, pB.y - 13, { s: 11, a: "center", c: SC.violet, box: BOX });
       I.label(ctx, CX, CY, 0, "✚ 질량 중심 (두 별이 함께 도는 점)", -205, 70, "#ffd36b", BOX);
       I.label(ctx, L, 40, HZ, "궤도면 — 두 별은 같은 주기로 돕니다", 64, -62, "#e8ecff", BOX);
-      I.label(ctx, L - 30, D, -8, "바닥 = 궤도를 내려다본 그림자", 40, 22, "#c9d2f0", BOX);
+      I.label(ctx, L - 30, D, -8, "바닥 = 궤도를 내려다본 그림자", 40, I.viewName === "top" ? -6 : 22, "#c9d2f0", BOX);
       /* 큰 제목 */
       var h1, h2;
       if (okA && okB) { h1 = "시리우스를 저울에 달았다"; h2 = "A " + mA.toFixed(2) + " M☉ · B " + mB.toFixed(2) + " M☉"; }
@@ -2020,6 +2020,7 @@ window.sthWork({
     { key: "r4", label: "④ 심장이 뛰는 별" },
     { key: "rQuiz", label: "수준별 문제" },
     { key: "rLab", label: "응용 실험실" },
+    { key: "rObs", label: "실제 자료 탭" },
     { key: "rInq", label: "교과서 실험" },
     { key: "rReal", label: "실제 자료" }
   ],
@@ -2039,6 +2040,7 @@ window.sthShare({
     { key: "r4", label: "④ 심장이 뛰는 별" },
     { key: "rQuiz", label: "수준별 문제" },
     { key: "rLab", label: "응용 실험실" },
+    { key: "rObs", label: "실제 자료 탭" },
     { key: "rInq", label: "교과서 실험" },
     { key: "rReal", label: "실제 자료" }
   ],

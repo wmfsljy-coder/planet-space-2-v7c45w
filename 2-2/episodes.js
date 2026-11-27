@@ -536,7 +536,7 @@ function msAt(mass) {
     })();
     var phase = 0, gplay = playWire("a-cen-play", !SK.REDUCE, ["은하 회전 멈추기", "은하 돌려 보기"]);
     var CS = 0.866, IS = 0.42, OX = 470, OY = 125, BL = 640, ZT = 160, MH = 478;
-    var I = SK.iso({ ox: OX, oy: OY, s: IS, L: BL, D: BL });
+    var I = SK.iso({ ox: OX, oy: OY, s: IS, L: BL, D: BL, cv: canvas });
     function WX(kx) { return (kx + 8) * 20; }            /* 1 kpc = 20 그림 단위(가로) */
     function WY(ky) { return (ky + 16) * 20; }
     function P(kx, ky, kz) { return I.P(WX(kx), WY(ky), kz * 10); }   /* 높이는 1 kpc = 10 (반으로 줄임) */
@@ -1182,7 +1182,7 @@ function msAt(mass) {
       RS.forEach(function (r, i) { var d = vtot(r, vh) - OBS[i]; s += d * d; });
       return Math.sqrt(s / RS.length);
     }
-    var IG = SK.iso({ ox: 752, oy: 98, s: .48, L: 200, D: 200 }), GZ = 150;
+    var IG = SK.iso({ ox: 752, oy: 98, s: .48, L: 200, D: 200, cv: canvas }), GZ = 150;
     function draw() {
       ctx.clearRect(0, 0, W, H);
       var e = rms(Vh), ok = e <= 5.0, k;
@@ -1746,6 +1746,7 @@ window.sthWork({
     { key: "r4", label: "④ 막대 인간이 나타났다" },
     { key: "rQuiz", label: "수준별 문제" },
     { key: "rLab", label: "응용 실험실" },
+    { key: "rObs", label: "실제 자료 탭" },
     { key: "rInq", label: "교과서 실험" },
     { key: "rReal", label: "실제 자료" }
   ],
@@ -1765,6 +1766,7 @@ window.sthShare({
     { key: "r4", label: "④ 막대 인간이 나타났다" },
     { key: "rQuiz", label: "수준별 문제" },
     { key: "rLab", label: "응용 실험실" },
+    { key: "rObs", label: "실제 자료 탭" },
     { key: "rInq", label: "교과서 실험" },
     { key: "rReal", label: "실제 자료" }
   ],
