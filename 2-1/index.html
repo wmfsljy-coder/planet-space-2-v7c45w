@@ -78,7 +78,7 @@
         <section class="scene" data-title="온도가 파장을 정한다">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">현대의 태양 관측자</span>“400년이 지나 우리는 태양을 여러 파장으로 봅니다. 그런데 <b>왜 층마다 다른 파장으로 봐야</b> 할까요? 온도가 답입니다. 뜨거울수록 가장 세게 내는 빛의 파장이 짧아집니다. 온도를 넣어 확인해 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="a-c-wien" width="900" height="400"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="a-c-wien" width="900" height="400"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">기체의 온도<span class="val" id="a-temp-val">3,000 K</span></div>
@@ -93,7 +93,7 @@
         <section class="scene" data-title="층마다 다른 얼굴">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">현대의 태양 관측자</span>“파장을 바꾸면 보이는 층이 바뀌고, 층이 바뀌면 보이는 현상도 바뀝니다. 관측 목록에 있는 현상들을 어느 층의 것인지 나눠 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="a-c-layer" width="900" height="380"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="sketch"><canvas id="a-c-layer" width="900" height="380"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">망원경에 끼운 필터<span class="val" id="a-band-val">가시광</span></div>
@@ -118,6 +118,15 @@
           <div class="stage-card" style="padding:6px 0 4px"><div id="wkA"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>흑점 장면의 모형에서는</b> 흑점이 위도마다 정해진 식 하나에 따라 일정한 빠르기로 돌고, 모양과 크기도 그대로입니다. <b>실제</b> 흑점은 대부분 며칠에서 몇 주 사이에 생겼다가 사라지고 모양도 바뀌며, 흑점마다 조금씩 따로 움직여서 잰 주기가 흩어집니다.</li>
+      <li><b>모형은</b> 태양의 자전만 보여 줍니다. <b>실제로</b> 지구에서 흑점을 쫓으면, 그동안 지구도 태양 둘레를 같은 방향으로 돌기 때문에 흑점이 같은 자리로 돌아오는 데 걸리는 시간이 태양의 실제 자전 주기보다 조금 길게 나옵니다.</li>
+      <li><b>빈의 변위 법칙 장면은</b> 별을 완전한 흑체로 보고 복사 곡선의 모양만 그렸습니다(세로축은 가장 센 곳을 1로 맞춘 값). <b>실제</b> 별빛의 스펙트럼에는 별의 대기가 특정 파장의 빛을 흡수해 생긴 흡수선이 많아 곡선이 매끄럽지 않고, 흑체 곡선과도 조금 어긋납니다.</li>
+      <li><b>층과 필터 장면은</b> 광구·채층·코로나를 세 층으로 나누어 층마다 온도를 대표값 하나로 적었고, 층의 두께는 보기 좋게 바꿔 그렸습니다. <b>실제로</b> 광구는 두께가 수백 km 정도로 얇고, 채층의 온도는 높이에 따라 크게 바뀌며, 채층과 코로나 사이의 얇은 전이층에서 온도가 갑자기 오릅니다. 파장별 태양 모습도 관측 위성의 사진을 흉내 내어 그린 그림입니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다. 바탕 개념: 2022 개정 교육과정 행성우주과학 교과서의 태양 관측(흑점과 태양의 자전, 태양의 대기) 내용. 이 소단원의 실제 자료 카드: 기상청 날씨누리 과거 관측 일별 자료, 창원(155) 1991 ~ 2020년 달마다 비가 0.1 mm 이상 온 날의 비율.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -144,7 +153,7 @@
         <section class="scene" data-title="손가락으로 만드는 시차">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“3억 km 떨어진 두 자리에서 별을 본다는 게 잘 안 와닿지요? 지금 바로 해 볼 수 있습니다. 팔을 뻗어 손가락 하나를 세우고, 왼눈과 오른눈을 번갈아 감아 보세요. 손가락이 뒤쪽 칠판 앞에서 <b>휙휙 옮겨 다니죠</b>. 손가락을 얼굴 쪽으로 당기면 어떻게 될까요?”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap stage"><canvas id="b-c-fin" width="900" height="400"></canvas></div>
+            <div class="canvas-wrap stage" data-kind-pos="br"><canvas id="b-c-fin" width="900" height="400"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">어느 눈으로 볼까<span class="val" id="b-eye-val">왼눈</span></div>
@@ -195,7 +204,7 @@
           <div class="story"><div class="who">🧑‍🔬</div><div class="say"><span class="name">베셀</span>“내가 8년 동안 한 일은 결국 이것입니다. <b>1월에 한 장, 7월에 한 장</b>. 두 사진에서 별이 배경별에 대해 얼마나 옮겨 갔는지 읽고, 두 자리에서 그은 방향선이 만나는 곳에 별이 있습니다. 직접 기록해 보십시오.”</div></div>
           <div class="stage-card">
             <div class="step-chips" id="b-rec-steps"><span>① 1월에 찍기</span><span>② 7월에 찍기</span><span>③ 방향선 긋기</span><span>④ 별 위치 찾기</span><span>⑤ 거리 구하기</span></div>
-            <div class="canvas-wrap stage"><canvas id="b-c-rec" width="900" height="440"></canvas></div>
+            <div class="canvas-wrap stage" data-kind-pos="br"><canvas id="b-c-rec" width="900" height="440"></canvas></div>
             <div class="controls">
               <button type="button" class="btn primary" id="b-rec-go">📷 1월(E₁)에서 사진 찍기</button>
               <button type="button" class="btn" id="b-rec-blink" disabled>👁 깜빡이 비교</button>
@@ -221,7 +230,7 @@
         <section class="scene" data-title="두 번째 자 — 밝기로 재는 거리">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“시차로는 가까운 별밖에 못 잽니다. 그래서 두 번째 자를 씁니다. 별이 <b>10 pc에 있다면 얼마나 밝을지(절대 등급 M)</b>를 알아낼 수 있다면, <b>실제로 보이는 밝기(겉보기 등급 m)</b>와 견주어 거리를 알 수 있어요. 거리를 옮겨 가며 관측값과 맞춰 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="b-c-mod" width="900" height="420"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="calc" data-kind-pos="br"><canvas id="b-c-mod" width="900" height="420"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="b-mod-read"></div>
               <div style="display:grid;gap:14px">
@@ -268,6 +277,15 @@
           <div class="stage-card" style="padding:6px 0 4px"><div id="wkB"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>연주 시차 장면은</b> 별까지의 거리를 크게 줄이고 각도를 크게 부풀려 그렸습니다. <b>실제로</b> 가장 가까운 별도 태양과 지구 사이 거리의 약 27만 배나 떨어져 있어서, 모든 별의 연주 시차는 1″(1°의 3,600분의 1)보다 작습니다.</li>
+      <li><b>관측 기록 장면에서는</b> 별이 연주 시차 때문에만 움직입니다. <b>실제</b> 별은 고유 운동으로 하늘에서 조금씩 옮겨 가고, 대기의 흔들림 때문에 별의 상도 번집니다. 그래서 여러 해에 걸쳐 여러 번 재어 연주 시차와 고유 운동을 나누어 구합니다.</li>
+      <li><b>모형에서는</b> 측정 오차를 한 가지 값으로 고정했습니다. <b>실제</b> 오차는 망원경과 관측 방법, 별의 밝기, 관측 횟수에 따라 별마다 다르며, 우주에서 잰 히파르코스·가이아 위성 자료는 지상 관측보다 훨씬 정밀합니다.</li>
+      <li><b>거리 지수 장면은</b> 별빛이 오는 길에 성간 티끌이 없다고 보고, 겉보기 등급과 절대 등급의 차이만으로 거리를 계산합니다. <b>실제로</b> 성간 티끌이 별빛을 흡수해 별이 더 어둡게 보이므로, 이것을 고치지 않으면 거리가 실제보다 멀게 나옵니다(Ⅱ-2 은하와 우주에서 다룹니다).</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다. 바탕 개념: 2022 개정 교육과정 행성우주과학 교과서의 별까지의 거리(연주 시차, 거리 지수) 내용. 이 소단원의 실제 자료 카드: 유럽 우주국(ESA) 히파르코스 위성 목록(1997, CDS VizieR I/239) — 연주 시차를 정밀하게 잰 별.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -293,7 +311,7 @@
         <section class="scene" data-title="단서 ① — 별은 어느 쪽으로 얼마나 빨리 가나">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“별의 운동은 두 조각입니다. 우리 쪽으로 오거나 멀어지는 <b>시선속도</b>는 스펙트럼선의 치우침(<span data-view="law:도플러 효과">도플러</span>)으로 잽니다. 하늘을 가로지르는 <b>접선속도</b>는 고유 운동과 거리로 구합니다. <b>v<sub>t</sub> = 4.74 × 고유 운동(″/년) × 거리(pc)</b>예요. 접선속도를 맞혀 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-c-motion" width="900" height="420"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="c-c-motion" width="900" height="420"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="c-motion-read"></div>
               <div style="display:grid;gap:14px">
@@ -333,7 +351,7 @@
           <div class="story"><div class="who">🧑‍🔬</div><div class="say"><span class="name">베셀</span>“이제 본론입니다. 두 별이 서로 도는 <b>쌍성</b>이라면, 궤도의 크기와 주기만으로 <b>두 별의 질량 합</b>을 구할 수 있습니다. <span data-view="law:케플러의 행성운동법칙">케플러 제3법칙</span>을 태양계 밖으로 넓히면 <b>M₁ + M₂ = a³ / P²</b> 이지요. 그리고 두 별이 도는 중심(질량 중심)이 어디냐가 <b>질량의 비</b>를 알려 줍니다.”</div></div>
           <figure class="hero-art"><img src="img/binary-sirius.webp" alt="검은 받침대 위 투명한 유리 상자 안에 작은 우주를 담은 모형. 크고 밝은 푸른빛 별과 아주 작은 흰 별이 둘 사이의 한 점을 중심으로 점선 궤도를 따라 돌고, 그 점에서 바닥까지 노란 점선이 내려와 있다. 큰 별은 그 점 가까이 작은 궤도를, 작은 별은 멀리 큰 궤도를 돈다." width="900" height="900" loading="lazy"><figcaption><b>밤하늘에서 가장 밝은 별은 혼자 도는 것이 아닙니다</b> 시리우스 곁에는 맨눈으로는 보이지 않는 작은 짝별이 있고, 두 별은 둘 사이의 한 점을 중심으로 함께 돕니다. 19세기에 베셀은 시리우스가 하늘에서 곧게 나아가지 않고 물결치듯 흔들리는 것을 보고, 보이지 않는 짝이 끌어당기고 있다고 짐작했습니다. 두 별이 그리는 궤도의 크기와 주기만 재면, 저울에 올려 보지 않고도 별의 무게를 달 수 있습니다. <span class="art-note">⚠ 두 별의 크기와 궤도 크기는 실제 비율이 아닙니다.</span></figcaption></figure>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-c-binary" width="900" height="620"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc" data-kind-pos="br"><canvas id="c-c-binary" width="900" height="620"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">내가 구한 두 별의 질량 합<span class="val" id="c-msum-val">1.0 M☉</span></div>
@@ -353,7 +371,7 @@
         <section class="scene" data-title="쌍성이 아닌 별은 어떻게 다나">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“질량을 직접 잴 수 있는 별은 <b>쌍성뿐</b>입니다. 그렇게 모은 쌍성 자료에서 규칙 하나가 나왔어요. 주계열성은 <b>무거울수록 훨씬 밝다</b>는 것. 대략 <b>L ∝ M<sup>3.5</sup></b>입니다. 이 다리를 놓으면 혼자 있는 별의 질량도 어림할 수 있지요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-c-ml" width="900" height="420"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="calc"><canvas id="c-c-ml" width="900" height="420"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">주계열성의 질량<span class="val" id="c-m-val">1.0 M☉</span></div>
@@ -378,6 +396,15 @@
           <div class="stage-card" style="padding:6px 0 4px"><div id="wkC"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>공간 운동 장면은</b> 세 별의 고유 운동·거리·시선 속도를 대표값 하나씩으로 두고 접선 속도를 계산합니다. <b>실제</b> 이 값들에는 측정 오차가 있고, 태양도 우주 공간에서 움직이고 있어서 우리가 재는 속도는 태양에 대한 상대 속도입니다.</li>
+      <li><b>북두칠성 장면에서</b> 별의 위치는 모양만 흉내 낸 모식도이고, 지금의 고유 운동이 앞으로도 똑같이 이어진다고 보고 별을 곧게 옮깁니다. <b>실제</b> 별은 우리은하 안에서 휘어진 궤도를 따라 돌고 우리와의 거리도 바뀌기 때문에, 오랜 시간이 지나면 지금의 고유 운동으로 계산한 자리와 조금씩 달라집니다.</li>
+      <li><b>쌍성 장면은</b> 두 별이 질량 중심을 원 궤도로 돌고, 우리가 궤도면을 바로 위에서 내려다본다고 둡니다. <b>실제</b> 시리우스 A와 B의 궤도는 꽤 찌그러진 타원이고 궤도면도 기울어져 있어서, 하늘에 보이는 궤도에서 기울기를 고쳐야 진짜 궤도 크기를 알 수 있습니다.</li>
+      <li><b>질량–광도 관계 장면은</b> 광도가 질량의 3.5제곱에 비례한다는 식 하나로 곡선을 그립니다. <b>실제로</b> 지수 3.5는 어림값이며, 아주 가벼운 별과 아주 무거운 별에서는 지수가 이보다 작고, 같은 질량이라도 별에 따라 광도가 조금씩 다릅니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다(시리우스 쌍성의 궤도 긴반지름 약 19.8 AU, 공전 주기 약 50.1년 같은 별 자료는 알려진 관측값에 맞춤). 바탕 개념: 2022 개정 교육과정 행성우주과학 교과서의 별의 운동과 질량 내용. 이 소단원의 실제 자료 카드: 유럽 우주국(ESA) 히파르코스 위성 목록(1997, CDS VizieR I/239) — 연주 시차를 정밀하게 잰 별.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -403,7 +430,7 @@
         <section class="scene" data-title="스스로 부풀었다 줄어드는 별">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">동아리장</span>“첫 번째 무리는 <b>맥동변광성</b>이에요. 별이 실제로 부풀었다 줄어들기를 되풀이합니다. 규칙적으로요. 주기를 바꿔 가며 어떤 무리가 나오는지 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="d-c-puls" width="900" height="420"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="d-c-puls" width="900" height="420"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">변광 주기<span class="val" id="d-p-val">1.68일</span></div>
@@ -436,7 +463,7 @@
         <section class="scene" data-title="터지는 밝기가 늘 같다면">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">동아리장</span>“Ia형 초신성은 특별해요. 백색왜성이 한계 질량을 넘는 순간 터지기 때문에 <b>최대 밝기가 거의 늘 같습니다.</b> 절대 등급 약 −19.3이에요. 밝기가 정해진 등불이니, 어둡게 보이면 그만큼 멀다는 뜻이지요. 이걸 <b>표준 촛불</b>이라고 합니다.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="d-c-candle" width="900" height="420"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="calc"><canvas id="d-c-candle" width="900" height="420"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">관측한 은하<span class="val" id="d-gal-val">은하 가</span></div>
@@ -464,6 +491,15 @@
           <div class="stage-card" style="padding:6px 0 4px"><div id="wkD"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>맥동 변광성 장면은</b> 광도 곡선을 단순한 모양(빨리 밝아졌다가 천천히 어두워지는 꺾은선이나 매끈한 물결)으로 그리고, 주기만 보고 변광성의 종류를 나눕니다. <b>실제</b> 광도 곡선의 모양은 별마다 다르고, 미라형 변광성은 주기마다 가장 밝을 때의 밝기도 달라집니다. 변광성의 종류는 주기뿐 아니라 스펙트럼 같은 별의 성질을 함께 보고 나눕니다.</li>
+      <li><b>모형은</b> 주기–광도 관계를 직선 하나로 둡니다. <b>실제</b> 세페이드 변광성은 이 직선 둘레에 조금씩 흩어져 있습니다. 또 같은 주기라도 더 어두운 Ⅱ형 세페이드가 따로 있다는 사실이 1950년대에 밝혀지면서, 외부 은하까지의 거리가 크게 고쳐졌습니다.</li>
+      <li><b>폭발 변광성 장면은</b> 별이 갑자기 밝아졌다가 일정한 비율로 어두워지는 곡선 하나로 나타냅니다. <b>실제</b> 신성과 초신성은 종류에 따라 밝아지는 정도, 어두워지는 빠르기, 곡선 모양이 다르고, 같은 종류라도 하나하나 조금씩 다릅니다.</li>
+      <li><b>표준 촛불 장면은</b> Ia형 초신성이 가장 밝을 때의 절대 등급을 값 하나로 고정하고, 별빛을 가리는 티끌과 우주 팽창의 효과는 넣지 않았습니다. <b>실제</b> Ia형 초신성의 최대 밝기도 조금씩 달라서, 천천히 어두워지는 것일수록 더 밝다는 관계로 보정한 뒤에 거리를 잽니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다. 바탕 개념: 2022 개정 교육과정 행성우주과학 교과서의 변광성과 거리 측정(세페이드 변광성, Ia형 초신성) 내용.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -512,33 +548,33 @@
 </div>
 
 <button class="theme-toggle" id="themeToggle">라이트 모드</button>
-<script src="../assets/theme.js?v=c3418585"></script>
+<script src="../assets/theme.js?v=b0f7ed73"></script>
 <script src="../assets/scope.js?v=cecf172a"></script>
 <script src="../assets/kit.js?v=94e3bd47"></script>
 <script src="../assets/story.js?v=cd80882e"></script>
 <script src="../assets/quiz.js?v=d1e13494"></script>
-<script src="../assets/lab.js?v=5ab4e410"></script>
+<script src="../assets/lab.js?v=8e2a04e0"></script>
 <script src="../assets/share-config.js?v=5bb01df7"></script>
 <script src="../assets/share.js?v=8ebc37fa"></script>
 <script src="../assets/account.js?v=435378ac"></script>
-<script src="episodes.js"></script>
-<script src="worked.js"></script>
-<script src="handoff.js"></script>
-<script src="quiz-items.js"></script>
+<script src="episodes.js?v=d3acc509"></script>
+<script src="worked.js?v=9cea91d1"></script>
+<script src="handoff.js?v=d0c9dc35"></script>
+<script src="quiz-items.js?v=64be7864"></script>
 <script src="../assets/review.js?v=c07fe051"></script>
 <script src="../assets/peer.js?v=b6f0b008"></script>
 <script src="../assets/qboard.js?v=b3bb8d32"></script>
-<script src="lab-cases.js"></script>
+<script src="lab-cases.js?v=dd4921ec"></script>
 <script src="../assets/inquiry.js?v=405fc23c"></script>
-<script src="inquiry-items.js"></script>
+<script src="inquiry-items.js?v=1d11f75c"></script>
 <script src="../assets/link.js?v=48d3d217"></script>
-<script src="data/hr-stars.js"></script>
-<script src="data/cw155.js"></script>
-<script src="real-cases.js"></script>
+<script src="data/hr-stars.js?v=67045130"></script>
+<script src="data/cw155.js?v=03f6a79b"></script>
+<script src="real-cases.js?v=78802392"></script>
 <script src="../assets/precheck.js?v=6e00687c"></script>
-<script src="precheck-items.js"></script>
-<script src="try-items.js"></script>
-<script src="scale-items.js"></script>
+<script src="precheck-items.js?v=de600213"></script>
+<script src="try-items.js?v=6cbd907f"></script>
+<script src="scale-items.js?v=a62c77f6"></script>
 <script src="https://wmfsljy-coder.github.io/science-teacher-hub-qtrqwc/assets/video-links.js" defer></script>
 </body>
 </html>

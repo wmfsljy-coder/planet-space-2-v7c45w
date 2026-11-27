@@ -71,7 +71,7 @@
         <section class="scene" data-title="주계열을 겹쳐 거리를 재다">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“성단의 별들은 모두 같은 거리에 있습니다. 그러니 표준 주계열을 <b>통째로 위아래로 옮겨</b> 관측점과 겹쳐 보면, 얼마나 내려야 맞는지가 곧 <b>거리 지수 m − M</b>이에요. 이것을 주계열 맞추기라고 합니다. 세 성단의 거리를 구해 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="a-c-fit" width="900" height="440"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc" data-kind-pos="br"><canvas id="a-c-fit" width="900" height="440"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="a-fit-read"></div>
               <div style="display:grid;gap:14px">
@@ -93,7 +93,7 @@
         <section class="scene" data-title="심장 박동으로 거리를 재다">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“주계열 맞추기는 별을 하나하나 찍어야 해서 아주 먼 성단에는 쓰기 어렵습니다. 그때 쓰는 것이 <b>맥동변광성</b>이에요. 세페이드는 <b>주기가 길수록 실제로 더 밝다</b>는 관계가 있어서, 밝기가 오르내리는 <b>주기만 재면 절대 등급을 알 수 있습니다.</b> 관측된 광도곡선에 내 모형 곡선을 포개 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="a-c-cep" width="900" height="440"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="a-c-cep" width="900" height="440"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">관측 대상<span class="val" id="a-cep-val">세페이드 가</span></div>
@@ -114,7 +114,7 @@
           <div class="story"><div class="who">🧑‍🔬</div><div class="say"><span class="name">섀플리</span>“이제 구상 성단들의 거리를 모두 구했습니다. 이것을 지도 위에 찍고, <b>이 공들이 둘러싸고 있는 한 점</b>을 찾으면 됩니다. 성단들이 그 점을 중심으로 고르게 퍼져 있다면, 그곳이 바로 우리은하의 중심일 겁니다. 태양에서 궁수자리 쪽으로 중심을 밀어 보십시오.”</div></div>
           <figure class="hero-art"><img src="img/milky-way-halo.webp" alt="투명한 유리 상자 안의 어두운 우주에 우리은하 모형이 납작하게 누워 있다. 노르스름한 중심부와 푸른 나선팔이 보이고, 원반의 위와 아래로 금빛의 작은 공 모양 별 무리 수십 개가 공 모양으로 넓게 흩어져 있다." width="900" height="900" loading="lazy"><figcaption><b>우리은하는 납작한 원반만이 아니라 별 공들에 둘러싸여 있습니다</b> 우리은하의 별 대부분은 얇은 원반과 그 가운데 불룩한 부분에 모여 있습니다. 그런데 원반 위아래로는 늙은 별 수십만 개가 공처럼 뭉친 구상 성단 150여 개가 커다란 공 모양으로 흩어져 있습니다. 이 성단들이 무엇을 둘러싸고 있는지 따져 보면, 은하 지도에서 우리가 선 자리가 드러납니다. <span class="art-note">⚠ 은하와 성단의 크기, 성단의 수는 실제 비율이 아닙니다.</span></figcaption></figure>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="a-c-cen" width="900" height="690"></canvas></div>
+            <div class="canvas-wrap studio" data-kind-pos="br"><canvas id="a-c-cen" width="900" height="690"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">내가 놓아 본 은하 중심 (태양에서 궁수자리 방향)<span class="val" id="a-cen-val">0.0 kpc</span></div>
@@ -144,6 +144,15 @@
           <div class="stage-card" style="padding:6px 0 4px"><div id="wkA"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>C-M도 장면의</b> 성단 별들은 컴퓨터로 흩뿌려 만든 점이고, 주계열에서 벗어나는 자리(전향점)는 나이만 넣으면 나오는 식 하나로 정해집니다. <b>실제</b> 성단의 C-M도에는 측정 오차, 쌍성, 성단 앞뒤에 있는 다른 별들이 섞여 있어 점이 더 흩어지고, 전향점의 위치는 별의 화학 조성에 따라서도 달라집니다.</li>
+      <li><b>주계열 맞추기 장면은</b> 모든 성단에 같은 표준 주계열을 겹쳐 거리를 구합니다. <b>실제로</b> 성단마다 화학 조성이 달라 주계열의 위치가 조금씩 다르고, 성간 티끌 때문에 별이 어둡고 붉게 보이는 효과도 함께 고쳐야 합니다.</li>
+      <li><b>세페이드 장면은</b> 주기–광도 관계를 직선 하나로 두고, 광도 곡선도 늘 같은 모양으로 그립니다. <b>실제</b> 세페이드 변광성은 이 직선 둘레에 조금씩 흩어져 있고, 성간 티끌에 의한 소광도 고쳐야 정확한 거리를 얻을 수 있습니다.</li>
+      <li><b>구상 성단 분포 장면의</b> 성단 위치는 컴퓨터로 뽑아 만든 것이고, 모든 성단의 거리를 정확히 안다고 둡니다. <b>실제로</b> 섀플리가 처음 구한 은하 중심까지의 거리는 성간 소광을 고려하지 않은 것 등의 까닭으로 지금 알려진 값보다 꽤 멀었고, 원반의 티끌 뒤에 가려 보이지 않는 구상 성단도 있습니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다. 바탕 개념: 2022 개정 교육과정 행성우주과학 교과서의 우리은하의 구조(성단의 색등급도, 변광성으로 잰 거리, 구상 성단의 분포) 내용.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -186,7 +195,7 @@
         <section class="scene" data-title="파란빛이 먼저 사라진다">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">분광 관측 담당</span>“깎이는 정도가 <b>파장마다 다르다</b>는 것이 결정적인 증거였어요. 짧은 파란빛이 긴 붉은빛보다 훨씬 많이 깎입니다. 그래서 별빛은 어두워질 뿐 아니라 <b>붉어집니다</b>. 스펙트럼형으로 알아낸 <b>원래 색</b>과 실제 <b>관측된 색</b>의 차이가 바로 <b>색초과 E(B−V)</b>예요. 관측된 색과 맞을 때까지 색초과를 넣어 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="b-c-red" width="900" height="440"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="b-c-red" width="900" height="440"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">관측 대상<span class="val" id="b-star-val">별 가 (B0형)</span></div>
@@ -230,6 +239,14 @@
           <div class="stage-card" style="padding:6px 0 4px"><div id="wkB"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>트럼플러 장면은</b> 성간 티끌이 원반 안에 고르게 퍼져 있어 거리에 비례해 일정하게 어두워진다고 보고, 같은 종류의 성단은 실제 지름이 모두 같다고 둡니다. <b>실제</b> 티끌은 구름처럼 뭉쳐 있어 방향에 따라 소광량이 크게 다르고, 성단의 크기도 성단마다 다릅니다.</li>
+      <li><b>적색화 장면은</b> 소광량이 색초과의 3.1배라는 관계를 언제나 쓰고, 파장에 따른 소광은 몇 개 파장의 대표값을 이은 곡선으로 나타냈습니다. <b>실제로</b> 3.1은 우리은하의 평균적인 값이고, 티끌 알갱이의 크기에 따라 방향마다 다른 값이 나옵니다.</li>
+      <li><b>성운 장면은</b> 가까운 별의 온도 하나로 방출 성운·반사 성운·암흑 성운이 정해지도록 단순하게 나누었습니다. <b>실제로</b> 한 성운 안에 스스로 빛을 내는 부분, 별빛을 반사하는 부분, 어두운 티끌 띠가 함께 보이기도 하고, 암흑 성운은 뒤쪽에 밝은 배경이 있어야 검게 드러납니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다. 바탕 개념: 2022 개정 교육과정 행성우주과학 교과서의 성간 물질(성간 소광과 적색화, 성운) 내용.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -256,7 +273,7 @@
         <section class="scene" data-title="태양계에서 규칙을 확인하다">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“먼저 규칙을 눈으로 확인합시다. 태양계는 질량이 거의 전부 한가운데(태양)에 있는 계예요. 이때 공전 속도는 <b>v = 29.8 ÷ √(거리/1 AU) km/s</b>가 됩니다. 세 행성의 공전 속도를 직접 계산해서 넣어 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-c-kep" width="900" height="420"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="calc"><canvas id="c-c-kep" width="900" height="420"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">관측 대상<span class="val" id="c-pl-val">지구</span></div>
@@ -292,7 +309,7 @@
         <section class="scene" data-title="질량은 어디에 있나">
           <div class="story"><div class="who">👩‍🏫</div><div class="say"><span class="name">천문대 선생님</span>“속도를 알면 질량을 알 수 있습니다. 반지름 r 안쪽의 질량은 <b>M = v²r / G</b>예요. 관측 속도로 구한 질량에서 보이는 물질의 질량을 빼면 남는 것이 <b><span data-view="law:암흑물질">암흑 물질</span></b>입니다. 거리를 바꿔 가며 둘의 양을 견주어 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-c-mass" width="900" height="440"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="c-c-mass" width="900" height="440"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">은하 중심에서의 거리<span class="val" id="c-rr-val">3.0 kpc</span></div>
@@ -316,6 +333,15 @@
           <div class="stage-card" style="padding:6px 0 4px"><div id="wkC"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>케플러 회전 장면은</b> 행성이 태양 둘레를 원 궤도로 돈다고 보고 공전 속도를 계산합니다. <b>실제</b> 행성의 궤도는 조금 찌그러진 타원이어서, 태양에 가까울 때 더 빠르고 멀 때 더 느립니다.</li>
+      <li><b>회전 곡선 장면의</b> 관측 점은 모형 곡선에 작은 흔들림을 더해 만든 값이고, 보이는 물질과 암흑 물질 헤일로를 각각 식 하나로 나타냈습니다. <b>실제</b> 우리은하의 회전 속도는 수소 기체가 내는 전파(21 cm선)와 별의 움직임으로 재는데, 우리가 은하 안에 있어서 중심에서 멀어질수록 오차가 커집니다.</li>
+      <li><b>질량 분포 장면은</b> 질량이 공 모양으로 고르게 퍼져 있다고 보고, 회전 속도와 반지름만으로 그 안쪽의 질량을 구합니다. <b>실제</b> 보이는 물질의 상당 부분은 납작한 원반에 모여 있어서, 이렇게 구한 값은 어림값입니다.</li>
+      <li><b>모형은</b> 회전 곡선이 바깥에서도 떨어지지 않는 까닭을 암흑 물질 헤일로로 설명합니다. <b>실제로</b> 암흑 물질이 무엇인지는 아직 밝혀지지 않았고, 중력 법칙을 고쳐서 설명하려는 연구도 있습니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다. 바탕 개념: 2022 개정 교육과정 행성우주과학 교과서의 우리은하의 회전과 암흑 물질 내용.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -342,7 +368,7 @@
         <section class="scene" data-title="선이 붉은 쪽으로 밀려 있다">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">CfA 탐사팀</span>“은하 스펙트럼에는 칼슘이 만든 어두운 선이 있습니다. 실험실에서 이 선의 파장은 <b>393.4 nm</b>예요. 관측된 스펙트럼에서 같은 선이 어디에 있는지 눈금을 맞춰 보세요. 밀려난 만큼이 <b>적색 편이 z</b>이고, <b>v = c z</b>, <b>d = v / H₀</b>로 거리가 나옵니다.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="d-c-spec" width="900" height="440"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="d-c-spec" width="900" height="440"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="d-spec-read"></div>
               <div style="display:grid;gap:14px">
@@ -364,7 +390,7 @@
         <section class="scene" data-title="깊이를 넣자 나타난 것">
           <div class="story"><div class="who">👩‍🔬</div><div class="say"><span class="name">CfA 탐사팀</span>“이제 같은 하늘 띠를 두 가지로 봅니다. 왼쪽은 <b>사진</b>, 오른쪽은 적색 편이로 깊이를 넣은 <b>쐐기 지도</b>예요. 얼마나 어두운 은하까지 스펙트럼을 찍을지를 정해 보세요. 어디까지 내려가야 구조가 드러날까요?”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="d-c-wedge" width="900" height="440"></canvas></div>
+            <div class="canvas-wrap studio" data-kind-pos="br"><canvas id="d-c-wedge" width="900" height="440"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">분광 관측을 하는 한계 등급<span class="val" id="d-lim-val">14.0 등급</span></div>
@@ -379,7 +405,7 @@
         <section class="scene" data-title="규모의 사다리">
           <div class="story"><div class="who">👨‍🏫</div><div class="say"><span class="name">우주론 선생님</span>“이제 한 걸음 물러나 봅시다. 들여다보는 상자의 크기를 키우면, 은하가 만드는 <b>집단의 계단</b>이 차례로 보입니다. 은하군에서 시작해 거대 구조까지 올라가 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="d-c-scale" width="900" height="440"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="sketch"><canvas id="d-c-scale" width="900" height="440"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">들여다보는 상자의 한 변<span class="val" id="d-sc-val">6.5 Mpc</span></div>
@@ -404,6 +430,15 @@
           <div class="stage-card" style="padding:6px 0 4px"><div id="wkD"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>적색 편이 장면은</b> 후퇴 속도를 ‘적색 편이 × 빛의 속력’으로 계산합니다. <b>실제</b> 이 식은 가까운 은하에서만 잘 맞고, 가까운 은하는 우주 팽창 말고도 저마다 움직이는 속도(초속 수백 km)가 있어서 안드로메다은하처럼 오히려 다가오는 은하도 있습니다.</li>
+      <li><b>쐐기 지도 장면의</b> 은하는 컴퓨터로 뽑아 만든 점이고, 허블 상수를 70 km/s/Mpc 하나로 두어 속도를 거리로 바꿉니다. <b>실제</b> 지도에서는 먼 곳의 어두운 은하가 관측에서 빠지고, 은하단 속 은하들이 빠르게 움직여서 은하단이 시선 방향으로 길쭉하게 늘어나 보이기도 합니다.</li>
+      <li><b>규모의 사다리 장면은</b> 은하군·은하단·초은하단의 크기를 대표값으로 적고, 은하의 배치는 컴퓨터로 만들었습니다. <b>실제로</b> 이런 집단에는 뚜렷한 경계가 없어서, 초은하단의 범위는 은하들의 움직임을 분석하는 방법에 따라 다르게 그려집니다.</li>
+      <li><b>모형은</b> 허블 상수를 정해진 값 하나로 둡니다. <b>실제로</b> 허블 상수는 재는 방법에 따라 약 67과 약 73 km/s/Mpc로 조금 다르게 나와, 아직 풀리지 않은 문제로 남아 있습니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다. 바탕 개념: 2022 개정 교육과정 행성우주과학 교과서의 외부 은하와 우주의 팽창, 우주의 거대 구조 내용. 이 소단원의 실제 자료 카드: Pantheon+ Ia형 초신성 자료(Scolnic et al. 2022, ApJ 938, 113; Brout et al. 2022) — 적색 편이 0.01~0.08의 초신성.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -452,32 +487,32 @@
 </div>
 
 <button class="theme-toggle" id="themeToggle">라이트 모드</button>
-<script src="../assets/theme.js?v=c3418585"></script>
+<script src="../assets/theme.js?v=b0f7ed73"></script>
 <script src="../assets/scope.js?v=cecf172a"></script>
 <script src="../assets/kit.js?v=94e3bd47"></script>
 <script src="../assets/story.js?v=cd80882e"></script>
 <script src="../assets/quiz.js?v=d1e13494"></script>
-<script src="../assets/lab.js?v=5ab4e410"></script>
+<script src="../assets/lab.js?v=8e2a04e0"></script>
 <script src="../assets/share-config.js?v=5bb01df7"></script>
 <script src="../assets/share.js?v=8ebc37fa"></script>
 <script src="../assets/account.js?v=435378ac"></script>
-<script src="episodes.js"></script>
-<script src="worked.js"></script>
-<script src="handoff.js"></script>
-<script src="quiz-items.js"></script>
+<script src="episodes.js?v=f8620b7f"></script>
+<script src="worked.js?v=8fddf17e"></script>
+<script src="handoff.js?v=3e4a8265"></script>
+<script src="quiz-items.js?v=082b875b"></script>
 <script src="../assets/review.js?v=c07fe051"></script>
 <script src="../assets/peer.js?v=b6f0b008"></script>
 <script src="../assets/qboard.js?v=b3bb8d32"></script>
-<script src="lab-cases.js"></script>
+<script src="lab-cases.js?v=71ca1227"></script>
 <script src="../assets/inquiry.js?v=405fc23c"></script>
-<script src="inquiry-items.js"></script>
+<script src="inquiry-items.js?v=b5327ccd"></script>
 <script src="../assets/link.js?v=48d3d217"></script>
-<script src="data/hubble-sn.js"></script>
-<script src="real-cases.js"></script>
+<script src="data/hubble-sn.js?v=67508120"></script>
+<script src="real-cases.js?v=66bef22e"></script>
 <script src="../assets/precheck.js?v=6e00687c"></script>
-<script src="precheck-items.js"></script>
-<script src="try-items.js"></script>
-<script src="scale-items.js"></script>
+<script src="precheck-items.js?v=8729b92f"></script>
+<script src="try-items.js?v=467d5ccf"></script>
+<script src="scale-items.js?v=f06f746b"></script>
 <script src="https://wmfsljy-coder.github.io/science-teacher-hub-qtrqwc/assets/video-links.js" defer></script>
 </body>
 </html>
